@@ -1,12 +1,13 @@
 //MODEL
-
 var mongoose = require( 'mongoose' ),
     Schema = mongoose.Schema;
+
+//create a new schema
 var ArticleSchema = new Schema({
     title: String,
     author: String,
     created_at: Date,
-    votes: {type:Number, default: 0},
+    votes: { type:Number, default: 0 },
     content: String
 })
 
