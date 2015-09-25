@@ -1,5 +1,5 @@
-var express = require ( 'express' ),
-    app = express (),
+var express = require ( 'express' ), //returns a function
+    app = express (), //calls the function and instantiates the app
     mongoose = require ( 'mongoose' ),
     bodyParser = require ( 'body-parser' ),
     apiRouter = require( './app/config/routes' ),

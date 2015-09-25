@@ -1,12 +1,11 @@
-var express = require ( 'express' ),
+var express = require ( 'express' ), //returns a function
   apiRouter = express.Router (),
-  articlesController = require ( '../controllers/articles' ),
-  Article = require ( '../models/article' );
+  articlesController = require ( '../controllers/articles' ), //require the controller
+  Article = require ( '../models/article' ); //require the model
+  //no views bc this is just an api
 
 
-apiRouter.route('/articles')
-  .post ( function ( req, res ) {
-      console.log ( req.body );
-  });
+apiRouter.route('/articles') //route method
+ .post(articlesController.create)
 
 module.exports = apiRouter;
