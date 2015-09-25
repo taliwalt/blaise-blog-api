@@ -6,6 +6,7 @@ var express = require ( 'express' ), //returns a function
 
 
 apiRouter.route('/articles') //route method
- .post(articlesController.create)
+  .post(articlesController.create)
+  .get(articlesController.index)
 
 module.exports = apiRouter;

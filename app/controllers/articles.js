@@ -16,7 +16,16 @@ function create ( req, res ) {
     })
 }
 
+function index(req, res) {
+    Article.find(function (err, articles) {
+        if (err) {
+            console.log("Could not retrieve Articles because: ", err);
+        } else {
+            res.json(articles);
+        }
+    })
+}
 module.exports = {
     create: create,
-    //index:  index 
+    index:  index 
 };
